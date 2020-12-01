@@ -9,6 +9,11 @@
 import UIKit
 import Kingfisher
 
+enum SYImgSource {
+    case remote(String)
+    case local(String)
+}
+
 protocol SYAutoScrollBannerDelegate: class {       // 轮播图点击代理
     
     func scrollBannerDidSelectIndex(index: Int)
@@ -61,7 +66,7 @@ class SYAutoScrollBanner: UIView, UICollectionViewDelegate, UICollectionViewData
     
     weak var delegate: SYAutoScrollBannerDelegate?   // 轮播图点击代理
     
-    private var scrollSource: [String] = [] {           // 数据源
+    private var scrollSource: [SYImgSource] = [] {           // 数据源
         
         didSet {
             
@@ -231,7 +236,7 @@ class SYAutoScrollBanner: UIView, UICollectionViewDelegate, UICollectionViewData
     }
     
     // 更新轮播图
-    func setScrollSource(_ scrollSource: [String]?) {
+    func setScrollSource(_ scrollSource: [SYImgSource]?) {
         
         deinitTimer()   // 暂停定时器
         
@@ -377,15 +382,14 @@ extension SYAutoScrollBanner {
                 
                 let imageName = scrollSource[indexPath.row]
                 
-                if imageName.hasPrefix("http") {
+                switch imageName {
+                case .local(let localImg):
+                    // 本地图片
+                    displayCell.imageView.image = UIImage.init(named: localImg)
+                case .remote(let remoteImg):
                     
                     // 网络图片
-                    displayCell.imageView.kf.setImage(with: URL(string: imageName), placeholder: self.placeholderImage)
-                    
-                }else {
-                    
-                    // 本地图片
-                    displayCell.imageView.image = UIImage.init(named: imageName)
+                    displayCell.imageView.kf.setImage(with: URL(string: remoteImg), placeholder: self.placeholderImage)
                 }
             }
         }
