@@ -22,7 +22,7 @@ pod 'SYAutoScrollBanner'
 
 ## Author
 
-cishing, xiashiyang@jjldxz.com
+cishing, cishing@qq.com
 
 ## License
 

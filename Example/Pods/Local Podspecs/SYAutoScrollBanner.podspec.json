@@ -1,7 +1,7 @@
 {
   "name": "SYAutoScrollBanner",
   "version": "0.1.0",
-  "summary": "A short description of SYAutoScrollBanner.",
+  "summary": "An auto scrollBanner...",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/cishing/SYAutoScrollBanner",
   "license": {
@@ -9,14 +9,22 @@
     "file": "LICENSE"
   },
   "authors": {
-    "cishing": "xiashiyang@jjldxz.com"
+    "cishing": "cishing@qq.com"
   },
   "source": {
     "git": "https://github.com/cishing/SYAutoScrollBanner.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "SYAutoScrollBanner/Classes/**/*"
+  "source_files": "SYAutoScrollBanner/Classes/**/*",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Kingfisher": [
+      "~> 5.15.8"
+    ]
+  },
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
 }

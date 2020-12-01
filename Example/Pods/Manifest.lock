@@ -1,15 +1,24 @@
 PODS:
-  - SYAutoScrollBanner (0.1.0)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - SYAutoScrollBanner (0.1.0):
+    - Kingfisher (~> 5.15.8)
 
 DEPENDENCIES:
   - SYAutoScrollBanner (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
 
 EXTERNAL SOURCES:
   SYAutoScrollBanner:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SYAutoScrollBanner: 0f3779f3b155815f12ff76a62033a0776ca33032
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  SYAutoScrollBanner: e53360e82c8f59d206c1161dff84e19789345107
 
 PODFILE CHECKSUM: 1ab59b1a5ee4ba872630b7e424a83823c20aacca
 

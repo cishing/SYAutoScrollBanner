@@ -26,13 +26,13 @@ fileprivate class SYimageViewCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(imageView)
         
-        let layoutLeft = NSLayoutConstraint.init(item: imageView, attribute:NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: contentView, attribute: NSLayoutAttribute.left, multiplier: 1.0, constant: 0.0)
+        let layoutLeft = NSLayoutConstraint.init(item: imageView, attribute:.left, relatedBy: .equal, toItem: contentView, attribute: .left, multiplier: 1.0, constant: 0.0)
         
-        let layoutRight = NSLayoutConstraint.init(item: imageView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: contentView, attribute: NSLayoutAttribute.right, multiplier: 1.0, constant: 0.0)
+        let layoutRight = NSLayoutConstraint.init(item: imageView, attribute: .right, relatedBy: .equal, toItem: contentView, attribute: .right, multiplier: 1.0, constant: 0.0)
         
-        let layoutTop = NSLayoutConstraint.init(item: imageView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: contentView, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: 0.0)
+        let layoutTop = NSLayoutConstraint.init(item: imageView, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1.0, constant: 0.0)
         
-        let layoutBottom = NSLayoutConstraint.init(item: imageView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: contentView, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 0.0)
+        let layoutBottom = NSLayoutConstraint.init(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1.0, constant: 0.0)
         
         contentView.addConstraints([layoutLeft, layoutRight, layoutTop, layoutBottom])
     }
@@ -146,10 +146,10 @@ class SYAutoScrollBanner: UIView, UICollectionViewDelegate, UICollectionViewData
         self.scrollBanner.dataSource = self
         self.addSubview(self.scrollBanner)
         
-        let layoutLeft = NSLayoutConstraint.init(item: self.scrollBanner, attribute:NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1.0, constant: 0.0)
-        let layoutRight = NSLayoutConstraint.init(item: self.scrollBanner, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1.0, constant: 0.0)
-        let layoutTop = NSLayoutConstraint.init(item: self.scrollBanner, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: 0.0)
-        let layoutBottom = NSLayoutConstraint.init(item: self.scrollBanner, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 0.0)
+        let layoutLeft = NSLayoutConstraint.init(item: self.scrollBanner, attribute:.left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: 0.0)
+        let layoutRight = NSLayoutConstraint.init(item: self.scrollBanner, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: 0.0)
+        let layoutTop = NSLayoutConstraint.init(item: self.scrollBanner, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0.0)
+        let layoutBottom = NSLayoutConstraint.init(item: self.scrollBanner, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0.0)
         
         self.addConstraints([layoutLeft, layoutRight, layoutTop, layoutBottom])
         
@@ -157,10 +157,10 @@ class SYAutoScrollBanner: UIView, UICollectionViewDelegate, UICollectionViewData
         self.pageControll.dataSource = self
         self.addSubview(self.pageControll)
         
-        let pageLayoutBottom = NSLayoutConstraint.init(item: self.pageControll, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: -5.0)
-        let pageLayoutHeight = NSLayoutConstraint.init(item: self.pageControll, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 0.0, constant: pageSize)
-        let pageLayoutCentreX = NSLayoutConstraint.init(item: self.pageControll, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 0.0)
-        self.pageLayoutWidth = NSLayoutConstraint.init(item: self.pageControll, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 0.0, constant: pageSize)
+        let pageLayoutBottom = NSLayoutConstraint.init(item: self.pageControll, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: -5.0)
+        let pageLayoutHeight = NSLayoutConstraint.init(item: self.pageControll, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: pageSize)
+        let pageLayoutCentreX = NSLayoutConstraint.init(item: self.pageControll, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        self.pageLayoutWidth = NSLayoutConstraint.init(item: self.pageControll, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: pageSize)
         
         self.addConstraints([pageLayoutBottom, pageLayoutHeight, pageLayoutCentreX, self.pageLayoutWidth])
     }
@@ -180,7 +180,7 @@ class SYAutoScrollBanner: UIView, UICollectionViewDelegate, UICollectionViewData
         timer = Timer.init(timeInterval: self.timeInterval, target: self, selector: #selector(autoScroll), userInfo: nil, repeats: true)
         timer?.tolerance = 0.1 * self.timeInterval
         
-        RunLoop.main.add(timer!, forMode: .commonModes)
+        RunLoop.main.add(timer!, forMode: .common)
     }
     
     // 自动轮播
@@ -245,7 +245,7 @@ class SYAutoScrollBanner: UIView, UICollectionViewDelegate, UICollectionViewData
             
             self.removeConstraint(self.pageLayoutWidth)
             
-            self.pageLayoutWidth = NSLayoutConstraint.init(item: self.pageControll, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 0.0, constant: width)
+            self.pageLayoutWidth = NSLayoutConstraint.init(item: self.pageControll, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: width)
             
             self.addConstraint(self.pageLayoutWidth)
             
