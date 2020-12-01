@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		3301054115BC35AA9A8E8030 /* Pods-SYAutoScrollBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYAutoScrollBanner_Example.release.xcconfig"; path = "Target Support Files/Pods-SYAutoScrollBanner_Example/Pods-SYAutoScrollBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
 		42CD598AD91804D39E9E94C0 /* Pods-SYAutoScrollBanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYAutoScrollBanner_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SYAutoScrollBanner_Tests/Pods-SYAutoScrollBanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C3A89AC3DC12E556161EC0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4C3A89AC3DC12E556161EC0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SYAutoScrollBanner_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYAutoScrollBanner_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,9 +41,9 @@
 		607FACE51AFB9204008FA782 /* SYAutoScrollBanner_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYAutoScrollBanner_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6B21B28DA1E083E18F246065 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6B21B28DA1E083E18F246065 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6D9468EA4CE7B8B6FD1ACF88 /* Pods_SYAutoScrollBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYAutoScrollBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B07FC53893E02BFFFE8F8E6 /* SYAutoScrollBanner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SYAutoScrollBanner.podspec; path = ../SYAutoScrollBanner.podspec; sourceTree = "<group>"; };
+		7B07FC53893E02BFFFE8F8E6 /* SYAutoScrollBanner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SYAutoScrollBanner.podspec; path = ../SYAutoScrollBanner.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7C1E2132064FAF9FA44D2A8D /* Pods_SYAutoScrollBanner_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYAutoScrollBanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5EC3645B177CD5A5A61763 /* Pods-SYAutoScrollBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYAutoScrollBanner_Example.debug.xcconfig"; path = "Target Support Files/Pods-SYAutoScrollBanner_Example/Pods-SYAutoScrollBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA80783BC2AC41BB3A33698 /* Pods-SYAutoScrollBanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYAutoScrollBanner_Tests.release.xcconfig"; path = "Target Support Files/Pods-SYAutoScrollBanner_Tests/Pods-SYAutoScrollBanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +77,6 @@
 				42CD598AD91804D39E9E94C0 /* Pods-SYAutoScrollBanner_Tests.debug.xcconfig */,
 				FAA80783BC2AC41BB3A33698 /* Pods-SYAutoScrollBanner_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

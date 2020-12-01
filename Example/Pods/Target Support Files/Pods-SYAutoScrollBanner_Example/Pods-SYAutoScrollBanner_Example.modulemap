@@ -1,0 +1,6 @@
+framework module Pods_SYAutoScrollBanner_Example {
+  umbrella header "Pods-SYAutoScrollBanner_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

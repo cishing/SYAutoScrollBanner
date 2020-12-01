@@ -1,0 +1,16 @@
+PODS:
+  - SYAutoScrollBanner (0.1.0)
+
+DEPENDENCIES:
+  - SYAutoScrollBanner (from `../`)
+
+EXTERNAL SOURCES:
+  SYAutoScrollBanner:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SYAutoScrollBanner: 0f3779f3b155815f12ff76a62033a0776ca33032
+
+PODFILE CHECKSUM: 1ab59b1a5ee4ba872630b7e424a83823c20aacca
+
+COCOAPODS: 1.9.3
