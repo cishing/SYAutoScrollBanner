@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SYAutoScrollBanner_Example' do
+  pod 'SYAutoScrollBanner', :path => '../'
+
+  target 'SYAutoScrollBanner_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
